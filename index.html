@@ -15,14 +15,41 @@
             <span>VaxHeroMoms</span>
         </div>
     
+        <div class="sections">
+            <a href="" class="section">Home</a>
+            <a href="" class="section">About Us</a>
+            <a href="" class="section">Mission</a>
+            <a href="" class="section">Contact Us</a>
+        </div>
+    </header>
+
+    <div class="contact-container" id="contact">
+        <h2>Contact Us</h2>
+        <form action="send-email.php" method="post">
+            <label for="name">Name:</label><br>
+            <input type="text" id="name" name="name" required><br>
+            <label for="email">Email:</label><br>
+            <input type="email" id="email" name="email" required><br>
+            <label for="message">Message:</label><br>
+            <textarea id="message" name="message" required></textarea><br><br>
+            <input type="submit" value="Submit">
+        </form>
+    </div>
+
+    <footer class="header">
+        <div class="logo">
+            <img src="assets/VHM-logo-transparent.png" alt="vhm logo">
+            <span>VaxHeroMoms</span>
+        </div>
+        
         <div class="socials">
-            <button class="social gbtn"><img class="gmail" src="assets/logo-gmail.svg" alt="icon-gmail"></button>
             <button class="social fbtn"><img class="gmail" src="assets/logo-facebook.svg" alt="icon-facebook"></button>
             <button class="social lbtn"><img src="assets/logo-linkedin.svg" alt="icon-linkedin"></button>
             <button class="social ibtn"><img class="gmail" src="assets/logo-instagram.svg" alt="icon-instagram"></button>
             <button class="social xbtn"><img src="assets/logo-x.svg" alt="icon-x"></button>
         </div>
-    </header>
+    </footer>
+
 
     <script src="app.js"></script>
 </body>
