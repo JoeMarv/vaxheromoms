@@ -1,0 +1,93 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;700&display=swap');
+
+:root {
+    --clr-black: hsl(0, 0%, 8%);
+    --clr-grey: hsl(0, 0%, 14%);
+    --clr-white: hsl(0, 0%, 100%);
+    --clr-light-grey: hsl(0, 0%, 85%);
+    --clr-yellow: hsl(52, 100%, 50%);
+    --clr-jade: hsl(150, 49%, 33%);
+    --ff: 'Space Grotesk', sans-serif;
+    --transition: 0.3s ease;
+}
+
+* {
+    -webkit-tap-highlight-color: transparent;
+    outline: none;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+button, a {
+    cursor: pointer;
+    transition: var(--transition);
+}
+
+body {
+    background-color: var(--clr-black);
+    display: flex;
+    flex-direction: column;
+    font-size: 16px;
+    color: var(--clr-white);
+    font-family: var(--ff);
+    justify-content: center;
+    margin: 1vw 0vw 0vw 0vw;
+}
+
+
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    z-index: 2;
+}
+
+.logo {
+    text-align: center;
+    margin: 2vw 0vw 0vw 8vw;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.logo img {
+    width: auto;
+    height: 3vw;
+    filter: brightness(0) invert(1)
+}
+
+.logo span {
+    margin: 0vw 0vw 0vw 0.5vw;
+    font-size: 1.5rem
+}
+
+.socials {
+    margin: 2vw 7vw 0vw 0vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.social {
+    height: 2.5vw;
+    width: 2.5vw;
+    margin: 0vw 1vw;
+    background-color: inherit;
+    border: none;
+    padding: 0vw;
+}
+
+.social img {
+    width: 2.5vw;
+    height: 2.5vw
+}
+
+.gmail {
+    filter: invert(1);
+}
+
+.social img:hover {
+    filter: brightness(0) saturate(100%) invert(82%) sepia(42%) saturate(1027%) hue-rotate(358deg) brightness(102%) contrast(104%);
+}
