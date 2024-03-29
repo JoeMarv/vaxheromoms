@@ -1,23 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles.css">
+    <title>Thank You!</title>
     <link rel="shortcut icon" href="assets/VHM-logo-transparent.png" type="image/x-icon">
-    <title>Thank You</title>
+    <link rel="stylesheet" href="thank-you.css">
 </head>
+
 <body>
-    <h1>Thank You!</h1>
-    <p>Your message has been successfully submitted. We'll get back to you shortly.</p>
-    <span>going back in 5 seconds</span>
+    <section>
+        <h1>Thank You!</h1>
+        <p>Your message has been successfully submitted. We'll get back to you shortly!</p>
+        <p>If you're not redirected automatically in <span class="countdown">5</span> seconds , you can <a href="index.html">click here</a> to go back to the homepage.</p>
+    </section>
     
 
     <script>
-        setTimeout(function () {
-            window.location.href = "https://joemarv.github.io/vaxheromoms/";
-        }, 5000);
+    // setTimeout(function() {
+    //   window.location.href = "index.html"; // Change 'index.html' to the URL of your homepage
+    // }, 5000); // Redirect after 5 seconds (adjust as needed)
+
+    function startCountdown() {
+        var seconds = 5; // Countdown duration in seconds
+        
+      // Update countdown every second
+        var countdownInterval = setInterval(function() {
+            seconds--;
+            document.getElementById("countdown").textContent = seconds;
+        
+            // Redirect when countdown reaches 0
+            if (seconds <= 0) {
+            clearInterval(countdownInterval); // Stop the countdown interval
+            window.location.href = "index.html"; // Change 'index.html' to the URL of your homepage
+            }
+        }, 1000); // Update every 1000ms (1 second)
+    }
+    
+        // Start the countdown when the page loads
+        window.onload = function() {
+        startCountdown();
+        }; function startCountdown() {
+            var seconds = 5; // Countdown duration in seconds
+
+            // Update countdown every second
+            var countdownInterval = setInterval(function () {
+                seconds--;
+                document.querySelector(".countdown").textContent = seconds;
+
+                // Redirect when countdown reaches 0
+                if (seconds <= 0) {
+                    clearInterval(countdownInterval); // Stop the countdown interval
+                    window.location.href = "index.html"; // Change 'index.html' to the URL of your homepage
+                }
+            }, 1000); // Update every 1000ms (1 second)
+        }
+
+        // Start the countdown when the page loads
+        window.onload = function () {
+            startCountdown();
+        };
     </script>
 </body>
+
 </html>

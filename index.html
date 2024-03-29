@@ -14,29 +14,40 @@
             <img src="assets/VHM-logo-transparent.png" alt="vhm logo">
             <span>VaxHeroMoms</span>
         </div>
-    
-        <div class="sections">
-            <a href="" class="section">Home</a>
-            <a href="" class="section">About Us</a>
-            <a href="" class="section">Mission</a>
-            <a href="" class="section">Contact Us</a>
+
+        <div class="menu">
+            <button class="menu-btn"><img src="assets/menu-sharp.svg" alt="menu button"></button>
+
+            <div class="sections">
+                <button class="close-btn"><img src="assets/close-sharp.svg" alt="close button"></button>
+                <a href="" class="section">Home</a>
+                <a href="" class="section">About Us</a>
+                <a href="" class="section">Mission</a>
+                <a href="" class="section">Activities</a>
+                <a href="" class="section">Contact Us</a>
+            </div>
         </div>
     </header>
 
     <div class="contact-container" id="contact">
-        <h2>Contact Us</h2>
-        <form action="https://formspree.io/f/xgegnkzl" method="post">
-            <label for="name">Name:</label><br>
-            <input type="text" id="name" name="name" required><br>
-            <label for="email">Email:</label><br>
-            <input type="email" id="email" name="email" required><br>
-            <label for="message">Message:</label><br>
-            <textarea id="message" name="message" required></textarea><br><br>
+        <div class="contact-us" id="contact-us">
+            <span class="form-header">Contact Us</span>
+            <form id="contactForm">
+                <input type="text" id="name" name="name" placeholder="Name" required><br>
+                <input type="email" id="email" name="email" placeholder="Email" required><br>
+                <textarea id="message" name="message" rows="5" placeholder="Message" required></textarea><br><br>
+                <input type="submit" value="Submit" class="send-button">
+            </form>
+        </div>
 
-            <input type="hidden" name="_redirect" value="https://joemarv.github.io/vaxheromoms/thank-you.html">
-
-            <input type="submit" value="Submit">
-        </form>
+        <div class="links">
+            <span class="links-header">Links</span>
+            <a href="" class="link">Home</a>
+            <a href="" class="link">About Us</a>
+            <a href="" class="link">Mission</a>
+            <a href="" class="link">Activities</a>
+            <a href="#contact-container" class="link">Contact Us</a>
+        </div>
     </div>
 
     <footer class="header">
@@ -52,6 +63,10 @@
             <button class="social xbtn"><img src="assets/logo-x.svg" alt="icon-x"></button>
         </div>
     </footer>
+
+    <span class="copyright">&copy; 2024 VaxHeroMoms</span>
+
+    <button class="top-btn"><img src="assets/arrow-up-circle-sharp.svg" alt=""></button>
 
 
     <script src="app.js"></script>
