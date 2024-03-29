@@ -218,7 +218,7 @@ textarea {
 
 
 /* MOBILE VIEW */
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 768px) {
     body {
     margin: 0.5rem 0vw 0vw 0vw;
     width: 100vw;
