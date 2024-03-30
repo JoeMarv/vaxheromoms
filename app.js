@@ -31,6 +31,7 @@ x.forEach(function(btn) {
 })
 
 
+// THANK YOU PAGE
 document.getElementById("contactForm").addEventListener("submit", function(event) {
     event.preventDefault(); // Prevent default form submission
     
@@ -63,3 +64,17 @@ document.getElementById("contactForm").addEventListener("submit", function(event
     alert('Oops! Something went wrong.');
         });
 });
+
+
+// MENU BAR
+const menu = document.querySelector('.sections')
+const menuBtn = document.querySelector('.menu-btn')
+const closeBtn = document.querySelector('.close-btn')
+
+menuBtn.addEventListener('click', function() {
+    menu.classList.toggle('open')
+})
+
+closeBtn.addEventListener('click', function() {
+    menu.classList.remove('open')
+})
