@@ -81,20 +81,35 @@ closeBtn.addEventListener('click', function() {
 
 
 // SCROLL TO TOP BUTTON
+const topBtn = document.querySelector ('.top-btn')
+
+window.addEventListener('scroll', function() {
+    const scrollHeight = window.pageYOffset
+
+    if (scrollHeight > 200) {
+        topBtn.classList.add('show-btn')
+    } 
+    else {
+        topBtn.classList.remove('show-btn')
+    }
+})
+
+topBtn.addEventListener('click', function() {
+    document.body.scrollTop = 0
+    document.documentElement.scrollTop = 0
+})
+
+
+//NAVBAR COLOUR CHANGE
 window.onscroll = function() {
-    scrollFunction();
-    };
+  scrollFunction();
+};
 
 function scrollFunction() {
-    var scrollToTopBtn = document.getElementById("scrollToTopBtn");
+    var navbar = document.querySelector("header");
     if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
-        scrollToTopBtn.style.display = "block";
+        navbar.classList.add("scrolled");
     } else {
-    scrollToTopBtn.style.display = "none";
+    navbar.classList.remove("scrolled");
     }
-}
-
-function scrollToTop() {
-    document.body.scrollTop = 0; // For Safari
-    document.documentElement.scrollTop = 0; // For Chrome, Firefox, IE and Opera
 }

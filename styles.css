@@ -36,12 +36,23 @@ body {
     margin: 1rem 0vw 0vw 0vw;
 }
 
+header {
+    background-color: var(--clr-white);
+    z-index: 2;
+    position: fixed;
+    top: 0;
+    width: 100vw;
+    padding: 0vw 0vw 1rem 0vw;
+}
 
 header, footer {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    /* z-index: 2; */
+}
+
+.scrolled {
+    background-color: hsl(0, 0%, 95%);
 }
 
 .menu-btn, .close-btn, .top-btn {
@@ -94,7 +105,7 @@ header, footer {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin: 2vw 20vw 2vw 8vw;
+    margin: 4vw 20vw 2vw 8vw;
 }
 
 .contact-us {
@@ -273,6 +284,7 @@ textarea {
     .menu-btn img, .close-btn img, .top-btn img {
         width: 2.5rem;
         height: 2.5em;
+        filter: brightness(0) saturate(100%) invert(38%) sepia(8%) saturate(2593%) hue-rotate(97deg) brightness(105%) contrast(99%);
     }
 
     .close-btn {
@@ -326,7 +338,7 @@ textarea {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        margin: 4vw 6vw;
+        margin: 16vw 6vw 4vw 6vw;
     }
 
     .contact-us {
@@ -445,7 +457,7 @@ textarea {
     }
 
     .top-btn {
-        position: absolute;
+        position: fixed;
         bottom: 14vw;
         right: 8vw;
         padding: 0vw;
@@ -455,6 +467,12 @@ textarea {
         border: none;
         transition: background-color 0.3s;
         animation: bounce 2s infinite alternate;
+        background-color: transparent;
+        display: none;
+    }
+
+    .show-btn {
+        display: block;
     }
 
     @keyframes bounce {
