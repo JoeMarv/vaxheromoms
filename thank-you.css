@@ -23,7 +23,7 @@ a {
     color: var(--clr-yellow);
 }
 
-a:hover {
+a:hover, a:active, a:focus {
     color: var(--clr-jade);
 }
 
@@ -55,4 +55,38 @@ section {
     align-items: center;
     justify-content: center;
     height: 80vh;
+}
+
+
+/* MOBILE VIEW */
+@media screen and (max-width: 768px) {
+    h1 {
+        color: var(--clr-jade);
+        font-weight: 700;
+        font-size: 2rem;
+    }
+
+    p {
+        font-size: 1rem;
+    }
+
+    body {
+        background-color: var(--clr-white);
+        display: flex;
+        flex-direction: column;
+        font-size: 16px;
+        color: var(--clr-black);
+        font-family: var(--ff);
+        justify-content: center;
+        margin: 1rem 6vw 0vw 6vw;
+        text-align: center;
+    }
+
+    section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        height: 80vh;
+    }
 }
