@@ -102,7 +102,7 @@ topBtn.addEventListener('click', function() {
 
 //NAVBAR COLOUR CHANGE
 window.onscroll = function() {
-  scrollFunction();
+    scrollFunction();
 };
 
 function scrollFunction() {
