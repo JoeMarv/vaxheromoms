@@ -14,19 +14,19 @@ facebook.forEach(function(btn) {
 
 linkedin.forEach(function(btn) {
     btn.addEventListener('click', function() {
-        window.location = "https://www.linkedin.com/"
+        window.location = "https://www.linkedin.com/in/team-vaxheromoms-07b164302/"
     })
 })
 
 instagram.forEach(function(btn) {
     btn.addEventListener('click', function() {
-        window.location = "https://www.instagram.com/"
+        window.location = "https://www.instagram.com/vaxheromoms_"
     })
 })
 
 x.forEach(function(btn) {
     btn.addEventListener('click', function() {
-        window.location = "https://www.x.com/"
+        window.location = "https://www.x.com/vaxheromoms?s=11"
     })
 })
 
@@ -39,7 +39,7 @@ document.getElementById("contactForm").addEventListener("submit", function(event
     var formData = new FormData(this);
     
     // Send form data asynchronously
-    fetch('https://formspree.io/f/xgegnkzl', {
+    fetch('https://formspree.io/f/xvoewnzv', {
     method: 'POST',
     body: formData,
     headers: {

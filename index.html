@@ -9,25 +9,49 @@
     <title>VaxHeroMoms</title>
 </head>
 <body>
-    <header class="header">
-        <div class="logo">
-            <img src="assets/VHM-logo-transparent.png" alt="vhm logo">
-            <span>VaxHeroMoms</span>
-        </div>
-
-        <div class="menu">
-            <button class="menu-btn"><img src="assets/menu-sharp.svg" alt="menu button"></button>
-
-            <div class="sections">
-                <button class="close-btn"><img src="assets/close-sharp.svg" alt="close button"></button>
-                <a href="" class="section">Home</a>
-                <a href="" class="section">About Us</a>
-                <a href="" class="section">Mission</a>
-                <a href="" class="section">Activities</a>
-                <a href="" class="section">Contact Us</a>
+    <div class="header-and-home">
+        <header class="header">
+            <div class="logo">
+                <img src="assets/VHM-logo-transparent.png" alt="vhm logo">
+                <span>VaxHeroMoms</span>
             </div>
-        </div>
-    </header>
+            
+            <div class="menu">
+                <button class="menu-btn"><img src="assets/menu-sharp.svg" alt="menu button"></button>
+            
+                <div class="sections">
+                    <button class="close-btn"><img src="assets/close-sharp.svg" alt="close button"></button>
+                    <a href="#home" class="section">Home</a>
+                    <a href="" class="section">About Us</a>
+                    <a href="" class="section">Mission</a>
+                    <a href="" class="section">Activities</a>
+                    <a href="#contact" class="section">Contact Us</a>
+                </div>
+            </div>
+        </header>
+            
+            
+        <section class="home" id="home">
+            <div class="home-body">
+                <div class="home-body-text">
+                    <span class="home-body-text-header">
+                        Vaccinate for a Healthy Future
+                    </span>
+
+                    <div class="home-body-text-body">
+                        Join us in our mission to combat vaccine hesitancy within Nigerian communities, ensuring a healthier future for all our
+                        children.
+                    </div>
+                </div>
+
+                <a href="#contact" class="contact-btn">CONTACT US</a>
+            </div>
+            
+            <div class="home-hero">
+            </div>
+        </section>
+    </div>
+
 
     <div class="contact-container" id="contact">
         <div class="contact-us" id="contact-us">
@@ -41,12 +65,12 @@
         </div>
 
         <div class="links">
-            <span class="links-header">Links</span>
-            <a href="" class="link">Home</a>
+            <span class="links-header">Overview</span>
+            <a href="#home" class="link">Home</a>
             <a href="" class="link">About Us</a>
             <a href="" class="link">Mission</a>
             <a href="" class="link">Activities</a>
-            <a href="#contact-container" class="link">Contact Us</a>
+            <a href="#contact" class="link">Contact Us</a>
         </div>
     </div>
 
