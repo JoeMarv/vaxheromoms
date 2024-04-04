@@ -135,3 +135,16 @@ function scrollToSection(sectionId) {
 
     menu.classList.toggle('open')
 }
+
+
+//MAP FUNCTION
+// Initialize the map
+var map = L.map('map').setView([51.505, -0.09], 13);
+
+// Add a tile layer (in this case, OpenStreetMap tiles)
+L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+    attribution: '© OpenStreetMap contributors'
+}).addTo(map);
+
+// Add a marker to the map
+var marker = L.marker([51.5, -0.09]).addTo(map);

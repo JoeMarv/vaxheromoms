@@ -6,6 +6,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="shortcut icon" href="assets/VHM-logo-transparent.png" type="image/x-icon">
     <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+
     <title>VaxHeroMoms</title>
 </head>
 <body>
@@ -171,7 +173,14 @@
 
     <section class="act" id= "act">
         <span class="act-header">Act Now</span>
-        <span class="act-text"></span>
+        <div class="act-body">
+            <span class="act-body-header">
+                Experience personalised healthcare on your terms. Skip the trip to the health centre
+                and order convenient home vaccinations at an affordable cost.
+            </span>
+
+            <div id="map"></div>
+        </div>
     </section>
 
 
@@ -216,5 +225,6 @@
 
 
     <script src="app.js"></script>
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
 </body>
 </html>

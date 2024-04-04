@@ -172,7 +172,7 @@ header, footer {
 }
 
 .about {
-    margin: 1rem 8vw;
+    margin: 1rem 8vw 0vw 8vw;
     display: flex;
     flex-direction: column;
 }
@@ -199,7 +199,8 @@ header, footer {
 }
 
 .mission {
-    margin: 1rem 8vw;
+    margin: 0rem 8vw;
+    padding: 6.5rem 0vw 0vw 0vw;
     display: flex;
     flex-direction: column;
     font-size: 1.2rem;
@@ -225,16 +226,29 @@ header, footer {
 }
 
 .act {
-    margin: 0vw 8vw 1rem 8vw;
+    margin: 0vw 8vw;
     display: flex;
     flex-direction: column;
+    padding: 6.5rem 0vw 0vw 0vw;
+}
+
+.act-body {
+    display: flex;
+    flex-direction: column;
+    justify-content: centre;
+}
+
+#map {
+    height: 20rem;
+    width: 80vw;
 }
 
 .contact-container {
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    margin: 2vw 20vw 2vw 8vw;
+    padding: 6.5rem 0vw 0vw 0vw;
+    margin: 0vw 20vw 4rem 8vw;
 }
 
 .contact-us {
@@ -499,7 +513,7 @@ textarea {
 
     .about {
         margin: 0vw 6vw;
-        padding: 3rem 0vw 0vw 0vw;
+        padding: 3.5rem 0vw 0vw 0vw;
         display: flex;
         flex-direction: column;
     }
@@ -528,7 +542,7 @@ textarea {
 
     .mission {
         margin: 0ve 6vw;
-        padding: 3rem 0vw 0vw 0vw;
+        padding: 3.5rem 0vw 0vw 0vw;
         display: flex;
         flex-direction: column;
         font-size: 1rem;
@@ -556,7 +570,7 @@ textarea {
 
     .act {
         margin: 0vw 6vw;
-        padding: 3rem 0vw 0vw 0vw;
+        padding: 3.5rem 0vw 0vw 0vw;
         display: flex;
         flex-direction: column;
         line-height: 1.6;
@@ -592,7 +606,8 @@ textarea {
         display: flex;
         flex-direction: column;
         justify-content: space-between;
-        margin: 16vw 6vw 4vw 6vw;
+        padding: 3.5em 0vw 0vw 0vw;
+        margin: 0vw 6vw 4vw 6vw;
     }
 
     .contact-us {
