@@ -66,6 +66,41 @@ document.getElementById("contactForm").addEventListener("submit", function(event
 });
 
 
+// NEWSLETTER
+document.getElementById("newsletterForm").addEventListener("submit", function(eventNews) {
+    eventNews.preventDefault(); // Prevent default form submission
+    
+    // Get form data
+    var formData = new FormData(this);
+    
+    // Send form data asynchronously
+    fetch('https://formspree.io/f/mvoeweqj', {
+    method: 'POST',
+    body: formData,
+    headers: {
+        'Accept': 'application/json'
+        }
+    })
+    .then(response => {
+        if (!response.ok) {
+        throw new Error('Network response was not ok');
+        }
+        return response.json();
+    })
+    .then(data => {
+    // Handle successful form submission
+    alert('Thank you! Your message has been sent.');
+    // Optionally, redirect users to another page
+    window.location.href = 'thank-you.html'; // Replace 'thank-you.html' with your thank you page URL
+    })
+    .catch(error => {
+    // Handle errors
+    console.error('There was an error!', error);
+    alert('Oops! Something went wrong.');
+        });
+});
+
+
 // MENU BAR
 const menu = document.querySelector('.sections')
 const menuBtn = document.querySelector('.menu-btn')
