@@ -139,12 +139,44 @@ function scrollToSection(sectionId) {
 
 //MAP FUNCTION
 // Initialize the map
-var map = L.map('map').setView([51.505, -0.09], 13);
+var map = L.map('map').setView([0, 0], 15); // Increased zoom level (15)
 
-// Add a tile layer (in this case, OpenStreetMap tiles)
+// Add a tile layer (e.g., OpenStreetMap)
 L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    attribution: '© OpenStreetMap contributors'
+    attribution: '&copy; OpenStreetMap contributors'
 }).addTo(map);
 
-// Add a marker to the map
-var marker = L.marker([51.5, -0.09]).addTo(map);
+// Get user's current location using Geolocation API
+navigator.geolocation.getCurrentPosition(function(position) {
+    var userLat = position.coords.latitude;
+    var userLon = position.coords.longitude;
+
+    // Set map view to user's current location with increased zoom level
+    map.setView([userLat, userLon], 15); // Increased zoom level (15)
+
+    // Mark user's location with a default marker
+    L.marker([userLat, userLon]).addTo(map).bindPopup('Your Location');
+
+    // Define a query to fetch hospital data from Overpass API around user's location
+    var overpassQuery = '[out:json];node["amenity"="hospital"](around:5000,' + userLat + ',' + userLon + ');out;';
+
+    // Fetch hospital data from Overpass API
+    fetch('https://overpass-api.de/api/interpreter', {
+        method: 'POST',
+        body: overpassQuery
+    })
+    .then(response => response.json())
+    .then(data => {
+    // Process the fetched data and add markers for hospitals
+    data.elements.forEach(hospital => {
+        var lat = hospital.lat;
+        var lon = hospital.lon;
+        L.marker([lat, lon]).addTo(map).bindPopup(hospital.tags.name || 'Hospital');
+        });
+    })
+    .catch(error => {
+        console.error('Error fetching hospital data:', error);
+    });
+    }, function(error) {
+    console.error('Error getting user location:', error);
+    });
