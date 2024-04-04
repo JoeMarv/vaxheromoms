@@ -25,6 +25,11 @@ button, a {
     transition: var(--transition);
 }
 
+b {
+    color: var(--clr-jade);
+    font-weight: 700;
+}
+
 body {
     background-color: var(--clr-white);
     display: flex;
@@ -166,6 +171,65 @@ header, footer {
     background-position: right;
 }
 
+.about {
+    margin: 1rem 8vw;
+    display: flex;
+    flex-direction: column;
+}
+
+.who, .journey, .values {
+    display: flex;
+    flex-direction: column;
+    font-size: 1.2rem;
+    margin: 0.5rem 0vw 1rem 0vw;
+}
+
+.who-header, .journey-header, .values-header {
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+.values-body {
+    display: flex;
+    flex-direction: column;
+}
+
+.values-body span {
+    margin: 0.25rem 0vw
+}
+
+.mission {
+    margin: 1rem 8vw;
+    display: flex;
+    flex-direction: column;
+    font-size: 1.2rem;
+}
+
+.mission-body {
+    display: flex;
+    flex-direction: column;
+}
+
+.mission-body span {
+    margin: 0.5rem 0vw;
+}
+
+.our, .why, .impact, .involved {
+    display: flex;
+    flex-direction: column;
+}
+
+.why-header, .impact-header, .involved-header {
+    font-size: 1.25rem;
+    color: var(--clr-black);
+}
+
+.act {
+    margin: 0vw 8vw 1rem 8vw;
+    display: flex;
+    flex-direction: column;
+}
+
 .contact-container {
     display: flex;
     flex-direction: row;
@@ -178,11 +242,12 @@ header, footer {
     flex-direction: column;
 }
 
-.form-header {
+.form-header, .act-header, .about-header, .mission-header {
     font-weight: 700;
-    font-size: 1.5rem;
+    font-size: 1.75rem;
     color: var(--clr-jade);
     text-transform: uppercase;
+    margin: 0vw 0vw 0.5rem 0vw;
 }
 
 input {
@@ -239,9 +304,10 @@ textarea {
 
 .links-header {
     font-weight: 700;
-    font-size: 1.5rem;
+    font-size: 1.75rem;
     color: var(--clr-jade);
     text-transform: uppercase;
+    margin: 0vw 0vw 0.5rem 0vw;
 }
 
 .link {
@@ -431,6 +497,69 @@ textarea {
         line-height: 1.75;
     }
 
+    .about {
+        margin: 0vw 6vw;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .who, .journey, .values {
+        display: flex;
+        flex-direction: column;
+        font-size: 1rem;
+        line-height: 1.6;
+        margin: 0.25rem 0vw 0.5rem 0vw;
+    }
+
+    .who-header, .journey-header, .values-header {
+        font-size: 1.1rem;
+        font-weight: 700;
+    }
+
+    .values-body {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .values-body span {
+        margin: 0.125rem 0vw
+    }
+
+    .mission {
+        margin: 1rem 6vw;
+        display: flex;
+        flex-direction: column;
+        font-size: 1rem;
+        line-height: 1.6;
+    }
+
+    .mission-body {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .mission-body span {
+        margin: 0.25rem 0vw;
+    }
+
+    .our, .why, .impact, .involved {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .why-header, .impact-header, .involved-header {
+        font-size: 1.1rem;
+        color: var(--clr-black);
+    }
+
+    .act {
+        margin: 3rem 6vw 0vw 6vw;
+        display: flex;
+        flex-direction: column;
+        line-height: 1.6;
+    }
+
+
     .contact-btn {
         color: var(--clr-black);
         background-color: inherit;
@@ -468,7 +597,7 @@ textarea {
         flex-direction: column;
     }
 
-    .form-header {
+    .form-header, .act-header {
         font-size: 1.5rem;
         color: var(--clr-jade);
     }
@@ -580,9 +709,9 @@ textarea {
     .top-btn {
         position: fixed;
         bottom: 14vw;
-        right: 8vw;
+        right: 10vw;
         width: 10vw;
-        height: 10vw;
+        height: 8vw;
         padding: 0vw;
         display: flex;
         justify-content: center;
@@ -592,6 +721,11 @@ textarea {
         animation: bounce 2s infinite alternate;
         background-color: transparent;
         display: none;
+    }
+
+    .top-btn img {
+        width: 10vw;
+        height: 10vw;
     }
 
     .show-btn {

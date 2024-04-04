@@ -21,11 +21,11 @@
             
                 <div class="sections">
                     <button class="close-btn"><img src="assets/close-sharp.svg" alt="close button"></button>
-                    <a href="#home" class="section">Home</a>
-                    <a href="" class="section">About Us</a>
-                    <a href="" class="section">Mission</a>
-                    <a href="" class="section">Activities</a>
-                    <a href="#contact" class="section">Contact Us</a>
+                    <a href="#home" class="section" onclick="scrollToSection('#home')">Home</a>
+                    <a href="#about" class="section" onclick="scrollToSection('#about')">About Us</a>
+                    <a href="#mission" class="section" onclick="scrollToSection('#mission')">Mission</a>
+                    <a href="#act" class="section" onclick="scrollToSection('#act')">Act Now</a>
+                    <a href="#contact" class="section" onclick="scrollToSection('#contact')">Contact Us</a>
                 </div>
             </div>
         </header>
@@ -53,7 +53,129 @@
     </div>
 
 
-    <div class="contact-container" id="contact">
+    <section class="about" id="about">
+        <span class="about-header">About Us</span>
+
+        <div class="who">
+            <span class="who-header">Who We Are</span>
+        
+            <span class="who-body">
+                VaxHeroMoms is a dedicated non-profit organization dedicated to promoting Hepatitis B vaccination and raising
+                awareness about its importance in Nigeria and beyond. Our team consists of 4 passionate medical students, 
+                united by a common goal: to eradicate Hepatitis B and its devastating effects.
+            </span>
+        </div>
+
+        <div class="journey">
+            <span class="journey-header">Our Journey</span>
+
+            <span class="journey-body">
+                Founded in 2024, VaxHeroMoms has been at the forefront of the fight against Hepatitis B, working tirelessly to address
+                the gaps in vaccination coverage, combat stigma and discrimination, and empower mothers and babies in communities to take control of their
+                health. Over the years, we have grown and evolved, expanding our reach, strengthening our partnerships, and making a
+                tangible impact in the lives of those affected by Hepatitis B.
+            </span>
+        </div>
+
+        <div class="values">
+            <span class="values-header">Our Values</span>
+
+            <span class="values-body">
+                At VaxHeroMoms, we are guided by the following core values:
+                
+                <span>
+                <b>Compassion:</b> We approach our work with empathy and understanding, recognizing the challenges faced by individuals
+                affected by hepatitis B and striving to support them with compassion and dignity.
+                </span>
+                
+                <span>
+                    <b>Collaboration:</b> We believe in the power of collaboration and partnership, working hand-in-hand with communities,
+                    governments, healthcare providers, and other stakeholders to achieve our shared goals.
+                </span>
+                
+                <span>
+                    <b>Integrity:</b> We uphold the highest standards of integrity, transparency, and accountability in everything we do, earning
+                    the trust and confidence of those we serve and collaborate with.
+                </span>
+            </span>
+        </div>
+    </section>
+
+
+    <section class="mission" id="mission">
+        <span class="mission-header">Mission</span>
+
+        <div class="mission-body">
+            <span class="mission-body-text our">
+                At VaxHeroMoms, our mission is to:
+
+                <span>
+                    <b>Educate:</b> We strive to educate individuals and communities about the risks of hepatitis B and the benefits of vaccination
+                    through informative campaigns, workshops, and outreach programs.
+                </span>
+                
+                <span>
+                    <b>Advocate:</b>  We advocate for policies and initiatives that support universal access to hepatitis B vaccination, especially
+                    in underserved communities.
+                </span>
+                
+                <span>
+                    <b>Empower:</b> We empower individuals to take control of their health by providing access to resources, support networks, and
+                    vaccination services.
+                </span>
+            </span>
+            
+            <span class="mission-body-text why">
+                <b class="why-header">Why Hepatitis B Vaccination Matters</b>
+
+                <span>
+                    Hepatitis B is a serious viral infection that can lead to liver damage, liver cancer, and even death if left untreated.
+                    Vaccination is the most effective way to prevent hepatitis B transmission and its potentially life-threatening
+                    consequences. By promoting vaccination, we aim to protect individuals and communities from the burden of hepatitis
+                    B-related diseases.
+                </span>
+            </span>
+            
+            <span class="mission-body-text impact">
+                <b class="impact-header">Our Impact</b>
+
+                <span>
+                    Since our establishment, we have made significant strides in our efforts to promote hepatitis B vaccination:
+                </span>
+
+                <span>
+                    <b>Increased Awareness:</b> We have reached thousands of individuals through social media awareness campaigns, educational materials, and
+                    community events, helping to dispel myths and misconceptions about Hepatitis B.
+                </span>
+                
+                <span>
+                    <b>Improved Access:</b> Through partnerships with healthcare providers and government agencies, we have facilitated access to
+                    vaccination services in remote and underserved areas, ensuring that no one is left behind.
+                </span>
+            </span>
+
+            <span class="mission-body-text involved">
+                <b class="involved-header">Get Involved</b> 
+
+                <span>
+                    Join us in our mission to promote hepatitis B vaccination and safeguard public health. Whether you're a healthcare
+                    professional, community leader, or concerned citizen, you can get involved by volunteering, donation and spreading the
+                    word. <br />
+                    
+                    Together, we can make a difference in the fight against hepatitis B and ensure a healthier future for all.
+                </span> 
+            </span>
+        </div>
+    </section>
+
+
+    <section class="act" id= "act">
+        <span class="act-header">Act Now</span>
+        <span class="act-text"></span>
+    </section>
+
+
+    <section class="contact-container" id="contact">
         <div class="contact-us" id="contact-us">
             <span class="form-header">Contact Us</span>
             <form id="contactForm">
@@ -66,13 +188,13 @@
 
         <div class="links">
             <span class="links-header">Overview</span>
-            <a href="#home" class="link">Home</a>
-            <a href="" class="link">About Us</a>
-            <a href="" class="link">Mission</a>
-            <a href="" class="link">Activities</a>
-            <a href="#contact" class="link">Contact Us</a>
+            <a href="#home" class="link" onclick="scrollToSection('#home')">Home</a>
+            <a href="#about" class="link" onclick="scrollToSection('#about')">About Us</a>
+            <a href="#mission" class="link" onclick="scrollToSection('#mission')">Mission</a>
+            <a href="#act" class="link" onclick="scrollToSection('#act')">Act Now</a>
+            <a href="#contact" class="link" onclick="scrollToSection('#contact')">Contact Us</a>
         </div>
-    </div>
+    </section>
 
     <footer class="header">
         <div class="logo">

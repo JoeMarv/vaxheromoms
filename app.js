@@ -113,3 +113,25 @@ function scrollFunction() {
     navbar.classList.remove("scrolled");
     }
 }
+
+
+// SCROLL TO SECTIONS PROPERLY
+function scrollToSection(sectionId) {
+    const header = document.querySelector('header')
+    const headerHeight = header.getBoundingClientRect().height; 
+    const section = document.querySelector(sectionId);
+
+    section.scrollIntoView({
+        behavior: 'smooth',
+        block: 'start',
+        inline: 'nearest'
+    });
+    
+    const topOffset = section.getBoundingClientRect().top + window.pageYOffset - headerHeight;
+    window.scrollTo({
+        top: topOffset,
+        behavior: 'smooth'
+    });
+
+    menu.classList.toggle('open')
+}
